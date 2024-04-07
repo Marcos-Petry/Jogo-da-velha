@@ -14,14 +14,12 @@ body{
     padding-top: 5vh;
 }
 
-/*Alinha as opções X e O dentro de suas "caixas"*/
 .alinhar{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/*Estilizações sobre a troca de jogador*/
 .trocaJogador{
     width: 170px;
     height: 80px;

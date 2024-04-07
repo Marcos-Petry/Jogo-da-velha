@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da velha</title>
+
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+   
+    <div class="trocaJogador">
+        <h3>Troca de Jogador</h3>
+        <div class="caixaTroca alinhar">X</div>
+        <div class="caixaTroca alinhar">O</div>
+        <div class="opcaoX"></div>
+    </div>
+    <div class="layoutJogo">
+        <div class="caixa alinhar">0</div>
+        <div class="caixa alinhar">1</div>
+        <div class="caixa alinhar">2</div>
+        <div class="caixa alinhar">3</div>
+        <div class="caixa alinhar">4</div>
+        <div class="caixa alinhar">5</div>
+        <div class="caixa alinhar">6</div>
+        <div class="caixa alinhar">7</div>
+        <div class="caixa alinhar">8</div>
+    </div>
+    <h2 id="resultado"></h2>
+    <button id="jogarNovamente">Jogar Novamente</button>
+
+    <div id="contador">
+        <p>Vitórias X: <span id="vitoriasX">0</span></p>
+        <p>Vitórias O: <span id="vitoriasO">0</span></p>
+        <p>Empates: <span id="empate">0</span></p>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

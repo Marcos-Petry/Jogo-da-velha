@@ -48,7 +48,6 @@ body{
     border-right: none;
 }
 
-/*Aplica as estilizações sobre a opção X presente na caixa de troca*/
 .opcaoX{
     position: absolute;
     bottom: 0;

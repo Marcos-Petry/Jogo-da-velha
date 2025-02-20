@@ -1,0 +1,51 @@
+# Este workflow demonstra um pipeline CI/CD simples
+name: Pipeline Acadêmico
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Etapa 1: Verificação básica dos arquivos
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Verifica estrutura do projeto
+        run: |
+          echo "Verificando arquivos necessários..."
+          ls -la
+          echo "Estrutura verificada com sucesso!"
+
+  test:
+    needs: validate
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Simula testes básicos
+        run: |
+          echo "Executando verificações simples..."
+          sleep 2
+          echo "Verificações concluídas!"
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Prepara ambiente
+        run: |
+          echo "Preparando ambiente para deploy..."
+          sleep 2
+          echo "Ambiente preparado!"
